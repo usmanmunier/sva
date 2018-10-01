@@ -1,0 +1,35 @@
+.tab-container {
+    display: flex;
+    ul {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+    }
+    li {
+        list-style: none;
+        padding: 4px 8px;
+        color:#353f4c;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover {
+            border-left: 4px solid #20c97d;
+            background-color: #ffffff;
+        }
+    }
+}
+.content-container {
+    width: 980px;
+    height: 500px;
+    .tab-label{
+        position: relative;
+        width: 470px;
+        padding: 30px;
+        bottom: 162px;
+        background-color: #fff;
+        font-size: 14px;
+        color: #353f4c;
+        left: -75px;
+    }
+}

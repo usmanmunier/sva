@@ -1,0 +1,55 @@
+.fees-container {
+    display: flex;
+    .fees-box{
+        padding: 40px;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+        border: solid 2px #f3f5f8;
+        width: 540px;
+        margin-right: 80px;
+        font-size: 16px;
+        text-align: center;
+        .title{
+            font-weight: bold;
+            color: #353f4c;
+            text-align: left;
+        }
+        .fee{
+            font-size: 40px;
+            font-weight: 600;
+            color: #6b6c72;
+            text-align: left;
+            .unit {
+                font-size: 24px;
+                font-weight: 600;
+                vertical-align: text-top;
+                color: #353f4c;
+                margin-right: 6px;
+            }
+            .per {
+                color: #8d9096;
+                font-size: 18px;
+                font-weight: normal;
+                vertical-align: middle;
+            }
+        }
+        .green{
+            color: #04c36f;
+        }
+        .list {
+            padding: 10px 0;
+            border-bottom: solid 1px #eceef1;
+            text-align: left;
+        }
+        .button {
+            border-radius: 32px;
+            margin-top: 70px;
+            padding: 16px 46px;
+            background-color: #8d9096;
+            color: #fff;
+        }
+        .button.green {
+            background-color: #04c36f;
+        }
+    }
+}
