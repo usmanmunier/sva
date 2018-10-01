@@ -1,29 +1,39 @@
 import React, { Component } from 'react';
-import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { connect } from "react-redux";
+const mapStateToProps = state => {
+  return { navItems: state.navigation.navItems };
+};
 
 class Navigation extends Component {
     handleSelect(k) {
         console.log(k);
     }
+    renderNavItems () {
+        const navList = [];
+        this.props.navItems.map(el => (
+            navList.push(<NavItem key={el.id} className="nav-item" eventKey={el.id} href={el.path} >{el.title}</NavItem>)
+        ));
+        //navList.push(<hr/>);
+        return navList;
+    }
     render() {
-        return(<Nav bsStyle="tabs" activeKey="1" onSelect={k => this.handleSelect(k)}>
-        <NavItem eventKey="/home" href="/home">
-          NavItem 1 content
-        </NavItem>
-        <NavItem eventKey="/faq" href="/faq">
-          NavItem 2 content
-        </NavItem>
-        <NavItem eventKey="/test" href="/test">
-          NavItem 3 content
-        </NavItem>
-        <NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown">
-          <MenuItem eventKey="4.1">Action</MenuItem>
-          <MenuItem eventKey="4.2">Another action</MenuItem>
-          <MenuItem eventKey="4.3">Something else here</MenuItem>
-          <MenuItem divider />
-          <MenuItem eventKey="4.4">Separated link</MenuItem>
-        </NavDropdown>
-      </Nav>);
+        return(<Navbar inverse collapseOnSelect className="navigation with-indicator" onSelect={k => this.handleSelect(k)}>
+            <Navbar.Header>
+                <span className="logo"></span>
+                <span className="name">
+                    Silicon Valley
+                    Academy
+                </span>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav>
+                    {this.renderNavItems()}
+                </Nav>
+        </Navbar.Collapse>
+    </Navbar>);
     }
 }
-export default Navigation;
+
+export default connect(mapStateToProps)(Navigation);
