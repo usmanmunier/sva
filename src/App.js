@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './assets/css/App.scss';
 import logo from './assets/images/bitmap.jpg';
-import { Button } from 'react-bootstrap';
-import Navigation from './components/Nav'
+import Navigation from './components/Navigation'
 import TextBlock from './components/TextBlock'
 import Fees from './components/Fees'
 import Tabs from './components/Tabs/Tabs'
