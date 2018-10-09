@@ -3,7 +3,7 @@ const initialState = {
       {
           title: "Home",
           id: 1,
-          path: "/home"
+          path: "/"
       },
       {
           title: "Our Sponsors",
@@ -28,7 +28,7 @@ const initialState = {
       {
           title: "Admissions",
           id: 6,
-          path: "/sponsors"
+          path: "/admissions"
       },
       {
           title: "Contact Us",

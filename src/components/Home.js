@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './assets/css/App.scss';
-import logo from './assets/images/bitmap.jpg';
-import Navigation from './components/Navigation'
-import TextBlock from './components/TextBlock'
-import Fees from './components/Fees'
-import Tabs from './components/Tabs/Tabs'
-import Tab from './components/Tabs/Tab'
-import { addArticle } from "./actions/index";
+import logo from '../assets/images/bitmap.jpg';
+
+import TextBlock from './TextBlock';
+import Fees from './Fees';
+import Tabs from './Tabs/Tabs';
+import Tab from './Tabs/Tab';
+import { addArticle } from "../actions/index";
 import { connect } from "react-redux";
 
 const mapDispatchToProps = dispatch => {
@@ -15,7 +14,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class App extends Component {
+class Home extends Component {
 
     constructor() {
         super();
@@ -34,12 +33,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
-            <Navigation />
-            <div className="title">To Inspire the Love of Learning</div>
-        </header>
+      <div className="">
+        <div className="header-title">To Inspire the Love of Learning</div>
         <div className="text-wrapper">
             <div className="goal">What’s Our Goal</div>
             <div className="col">
@@ -95,11 +90,12 @@ class App extends Component {
                 <div className="goal sub-heading">Schedule</div>
                 <iframe href="https://calendar.google.com/calendar/embed?src=svaschool.org_us4ga4j1cfs27epj0f2dfegcl0@group.calendar.google.com&ctz=America/Los_Angeles&pli=1" title="schedule"/>
             </div>
-
+            <div className="text-wrapper blue none">
+                <iframe title="Silicon Valley Academy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.841004722499!2d-122.00570318470054!3d37.34627267983965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5ed7855118b%3A0xa0159fccb724e860!2sSilicon+Valley+Academy!5e0!3m2!1sen!2sus!4v1538519378446" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+            </div>
       </div>
     );
   }
 }
 
-export default connect(null, mapDispatchToProps)(App);
-;
+export default connect(null, mapDispatchToProps)(Home);
