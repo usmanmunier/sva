@@ -179,6 +179,20 @@ nav ul li{
     padding-left: 0;
     padding-right: 0;
 }
+.flex{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    div {
+        width: 200px;
+        margin-top: 10px;
+        a{
+            margin-left: 10px;
+            vertical-align: top;
+            color: #20c97d
+        }
+    }
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
