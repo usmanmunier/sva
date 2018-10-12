@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 
-class Programs extends Component{
+class Parents extends Component{
     render(){
         return(<div className="text-wrapper">
-            <div className="heading">Programs at SVA</div>
+            <div className="heading">Parents</div>
         </div>);
     }
 }
 
-export default Programs;
+export default Parents;

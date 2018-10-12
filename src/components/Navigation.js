@@ -20,7 +20,8 @@ class Navigation extends Component {
     render() {
         return(<header>
                 <nav>
-                    <span className="nav-logo"><span className="logo"></span>
+                    <span className="nav-logo">
+                        <span className="logo"></span>
                     <span className="name">
                 Silicon Valley
                 Academy
@@ -29,6 +30,7 @@ class Navigation extends Component {
                     {this.renderNavItems()}
                 </ul>
     </nav>
+    <div className="header-title">To Inspire the Love of Learning</div>
   </header>
         );
     }

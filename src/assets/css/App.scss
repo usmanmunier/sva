@@ -85,16 +85,14 @@
     margin-top: 30px;
 }
 .nav-tabs {display: inline-block; text-align: right;}
-.goal {
-    width: 322px;
-    height: 55px;
+.heading {
+    text-align: center;
     font-size: 40px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: left;
     color: #353f4c;
     margin: 0 auto;
     margin-bottom: 60px;
@@ -179,6 +177,7 @@ nav ul li{
 }
 .none {
     padding-left: 0;
+    padding-right: 0;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

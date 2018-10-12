@@ -3,6 +3,7 @@ import logo from '../assets/images/bitmap.jpg';
 
 import TextBlock from './TextBlock';
 import Fees from './Fees';
+import ContactUs from './ContactUs';
 import Tabs from './Tabs/Tabs';
 import Tab from './Tabs/Tab';
 import { addArticle } from "../actions/index";
@@ -34,9 +35,8 @@ class Home extends Component {
   render() {
     return (
       <div className="">
-        <div className="header-title">To Inspire the Love of Learning</div>
         <div className="text-wrapper">
-            <div className="goal">What’s Our Goal</div>
+            <div className="heading">What’s Our Goal</div>
             <div className="col">
                 <div className="left-col clear">
                     <TextBlock heading="OUR MISSION" text="Our mission is to respect, foster and value every child’s cognitive development; cultural diversity; social, physical and emotional growth by providing a safe and nurturing learning environment." />
@@ -58,7 +58,7 @@ class Home extends Component {
             </div>
         </div>
             <div className="text-wrapper blue">
-                <div className="goal sub-heading">Enrichment Programs</div>
+                <div className="heading sub-heading">Enrichment Programs</div>
                 <div className="tabs-container">
                     <Tabs>
                         <Tab id="1" title="art exhibit">
@@ -75,7 +75,7 @@ class Home extends Component {
                 </div>
             </div>
             <div className="text-wrapper">
-                <div className="goal sub-heading">Fees and Tuition</div>
+                <div className="heading sub-heading">Fees and Tuition</div>
                 <div className="fees-container">
                     <Fees className="green" title="Pre-K" unit="$" fee="9000" per=" / year" time="8:30am – 3:00pm" snacks="Snacks" activities="Play activities" desc1="Material, Registration & Maintenance Fee are applied" desc2="Discounted rate for half day students – $8,000" />
                     <Fees title="KG- 8th Grade" unit="$" fee="7000" per=" / year" time="8:30am – 3:00pm" snacks="No meal" activities="Play activities" desc1="Material, Registration & Maintenance Fee are applied" desc2="Discounted rate available for 2 or more students: $6,500 each" />
@@ -83,16 +83,14 @@ class Home extends Component {
             </div>
 
             <div className="text-wrapper blue">
-                <div className="goal sub-heading">Blog</div>
+                <div className="heading sub-heading">Blog</div>
             </div>
 
             <div className="text-wrapper">
-                <div className="goal sub-heading">Schedule</div>
+                <div className="heading sub-heading">Schedule</div>
                 <iframe href="https://calendar.google.com/calendar/embed?src=svaschool.org_us4ga4j1cfs27epj0f2dfegcl0@group.calendar.google.com&ctz=America/Los_Angeles&pli=1" title="schedule"/>
             </div>
-            <div className="text-wrapper blue none">
-                <iframe title="Silicon Valley Academy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.841004722499!2d-122.00570318470054!3d37.34627267983965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5ed7855118b%3A0xa0159fccb724e860!2sSilicon+Valley+Academy!5e0!3m2!1sen!2sus!4v1538519378446" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <ContactUs />
       </div>
     );
   }
